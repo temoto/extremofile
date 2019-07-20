@@ -19,6 +19,15 @@ Failure modes detected:
 
 Failures not handled by design: human error, files deleted.
 
+## API guarantees
+
+- You only get valid value bytes.
+- You may get value/writer together with non-critical error.
+- Internal storage format may change with major version.
+- Library will read one previous storage format.
+- Thread-safe.
+- Not safe to use by multiple processes, data may be corrupted.
+
 
 # FAQ
 
